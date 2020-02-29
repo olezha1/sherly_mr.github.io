@@ -12,10 +12,10 @@ body {
 }
 
 .main {
-    background-color: rgb(161, 6, 154);
+    background-color: rgba(236, 35, 85, 0.507);
     display: flex;
     flex-wrap: wrap;
-    width: 1000px;
+    max-width: 1000px;
     margin:auto ;
     box-shadow:0 0 10px 1px rgba(0, 0, 0.3);
 }
@@ -25,10 +25,13 @@ body {
     max-width: 490px;
     background-color: rgb(0, 0, 0);
     margin: 5px;
-    width: calc(50% - 10px);
+    width: calc(95vw / 2 - 10px );
     height: calc(95vw / 2 / 16 *9);
     background-size: cover;
     background-position: center;
+    opacity: 0.65;
+    transition: opasity 0.2s linear, transform 0.2s ease-in;
+    filter: sepia(100%);
 }
 .heading {
     font-size: 48px;
@@ -37,4 +40,40 @@ body {
     padding: 30px 0;
     font-family: 'Lacquer';
 font-family: 'Akronim';
+}
+
+@media all and ( max-width: 768px ) {
+.item {
+    max-height: initial;
+    max-width: initial;
+width: 95vw;
+height: calc(95vw / 16 * 9)  ;
+margin: 5px 0;
+} 
+
+}
+
+@media all and (min-width: 1200px) {
+    .item:hover {
+        opacity: 1;
+        transform: scale(1.2)  rotate(5deg);
+        z-index: 10;
+        box-shadow: 0 0 15px 11px rgba(0, 0, 0.4)  ;
+        filter: none
+   }
+   .autor:hover {
+       border-color: #111;
+   }
+}
+.link-wrapper {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.autor {
+    color:rgb(0, 0, 0);
+    text-decoration : none;
+    border-bottom: 2px solid transparent;
+transition: 0.3s;
 }
