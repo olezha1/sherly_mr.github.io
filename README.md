@@ -1,1 +1,1 @@
-(/Gallery/index.htm)[галерея]
+[галерея](/Gallery/index.htm)
